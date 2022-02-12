@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import millify from "millify";
 import { Link } from "react-router-dom";
 import { Col, Row, Input, Card } from "antd";
-
+import Loader from "./Loader";
 import { useGetCryptosQuery } from "../services/cryptoApi";
 
 const CryptoCurrencies = ({ simplified, showSearch }) => {
@@ -19,7 +19,7 @@ const CryptoCurrencies = ({ simplified, showSearch }) => {
   }, [cryptosList, searchTerm]);
 
   if (isFetching) {
-    return "Loading";
+    return <Loader />;
   }
   return (
     <>

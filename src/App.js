@@ -5,7 +5,7 @@ import { Navbar } from "./components/index";
 
 import {
   Homepage,
-  Exchanges,
+  // Exchanges,
   Cryptocurrencies,
   CryptoDetails,
   News,
@@ -24,7 +24,7 @@ const App = () => {
           <div className="routes">
             <Routes>
               <Route exact path="/" element={<Homepage />} />
-              <Route path="/exchanges" element={<Exchanges />} />
+              {/* <Route path="/exchanges" element={<Exchanges />} /> */}
               <Route path="/cryptocurrencies" element={<Cryptocurrencies />} />
               <Route path="/crypto/:coinId" element={<CryptoDetails />} />
               <Route path="news" element={<News />} />
